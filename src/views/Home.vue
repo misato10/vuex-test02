@@ -1,18 +1,14 @@
 <template>
-  <v-container>
+  <v-container grid-list-lg>
     
       <h1>Home page</h1>
       <p>Counter is:{{ allItems }} </p>
-      <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
-      <v-flex xs12 sm4 class="my-4">
-        <v-card v-for="item in allItems" :key="item.id" class="mx-auto">
-          <v-card-title>{{item.item_name}}</v-card-title>
-          <v-img :src="require('@/assets/'+ item.item_img)" alt=""></v-img>
+      <v-layout row wrap>
+      <v-flex v-for="item in allItems" :key="item.id" d-flex xs6 md3 class="my-4">
+        <v-card :to="'/item/' + item.id">
+            <v-img :src="require('@/assets/'+ item.item_img)" alt=""></v-img>
+            <v-card-title>{{item.item_name}}</v-card-title>
+            <v-card-subtitle><b>￥{{ item.item_price }}</b> +税</v-card-subtitle>
         </v-card>
       </v-flex>
     </v-layout>
