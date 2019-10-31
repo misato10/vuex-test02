@@ -1,6 +1,5 @@
 <template>
-  <v-container grid-list-lg>
-    
+  <v-container grid-list-lg>  
       <h1>Home page</h1>
       <!--<p>Counter is:{{ allItems }} </p>-->
       <v-layout row wrap>
