@@ -2,7 +2,7 @@
   <v-container grid-list-lg>
     
       <h1>Home page</h1>
-      <p>Counter is:{{ allItems }} </p>
+      <!--<p>Counter is:{{ allItems }} </p>-->
       <v-layout row wrap>
       <v-flex v-for="item in allItems" :key="item.id" d-flex xs6 md3 class="my-4">
         <v-card :to="'/item/' + item.id">
