@@ -62,6 +62,26 @@ export default {
           'property': 'og:url',
           'content': 'https://misato-vuex-shop.netlify.com/'
         },
+        {
+        'vmid': 'twitter:card',
+        'name': 'twitter:card',
+        'content': 'summary_large_image'
+        },
+        {
+          'vmid': 'twitter:title',
+          'name': 'twitter:title',
+          'content': 'SHOP DEMO'
+        },
+        {
+          'vmid': 'twitter:description',
+          'name': 'twitter:description',
+          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
+        },
+        {
+          'vmid': 'twitter:image:src',
+          'name': 'twitter:image:src',
+          'content': 'https://misato-vuex-shop.netlify.com/images/ogp.png'
+        }
       ]
     }
 };

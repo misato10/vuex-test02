@@ -42,6 +42,16 @@ export default {
           'property': 'og:url',
           'content': 'https://misato-vuex-shop.netlify.com/about/'
         },
+        {
+          'vmid': 'twitter:title',
+          'name': 'twitter:title',
+          'content': this.title + ' | SHOP DEMO'
+        },
+        {
+          'vmid': 'twitter:description',
+          'name': 'twitter:description',
+          'content': this.description
+        },
       ]
     }
   }
