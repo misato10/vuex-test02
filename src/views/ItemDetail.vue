@@ -47,7 +47,7 @@ export default {
         {
           'vmid': 'og:title',
           'property': 'og:title',
-          'content': this.title + ' | SHOP DEMO'
+          'content': this.item[0].item_name + ' | SHOP DEMO',
         },
         {
           'vmid': 'og:description',
@@ -57,7 +57,7 @@ export default {
         {
           'vmid': 'og:url',
           'property': 'og:url',
-          'content': 'https://misato-vuex-shop.netlify.com/item/'+ this.item[0].id
+          'content': 'https://misato-vuex-shop.netlify.com/item/'+ this.item[0].id + '/'
         },
       ]
     }
