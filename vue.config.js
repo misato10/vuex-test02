@@ -2,12 +2,15 @@
 
 const path = require('path')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
+
 
 //const items = itemas
 
-const dynamicRoutes  = ['/item/1','/item/2','/item/3','/item/4']
-const staticRoutes = ['/', '/about', ]
-const allRoutes = staticRoutes.concat(dynamicRoutes);
+const dynamicPaths  = ['/item/1/','/item/2/','/item/3/','/item/4/']
+const staticPaths = ['/', '/about/', ]
+const routerPaths = staticPaths.concat(dynamicPaths);
+
 
 module.exports = {
   "transpileDependencies": [
@@ -17,8 +20,13 @@ module.exports = {
     return {
         plugins: [
             new PrerenderSPAPlugin({
-                staticDir: path.join(__dirname, 'dist'),
-                routes: allRoutes
+              staticDir: path.join(__dirname, 'dist'),
+              routes: routerPaths
+            }),
+            new SitemapPlugin('https://misato-vuex-shop.netlify.com', routerPaths, {
+              fileName: 'sitemap.xml',
+              lastMod: true,
+              changeFreq: 'monthly'
             })
         ]
     }
