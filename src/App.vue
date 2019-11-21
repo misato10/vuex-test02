@@ -35,7 +35,7 @@ export default {
         {
           'vmid': 'description',
           'property': 'description',
-          'content': '「ITエンジニア」や「ITやりたいけどよくわからない」、「ITなにそれ？」って方へ技術支援などを目的としたチームです。'
+          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
         },
         {
           'vmid': 'og:title',
@@ -50,7 +50,7 @@ export default {
         {
           'vmid': 'og:description',
           'property': 'og:description',
-          'content': '「ITエンジニア」や「ITやりたいけどよくわからない」、「ITなにそれ？」って方へ技術支援などを目的としたチームです。'
+          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
         },
         {
           'vmid': 'og:type',
