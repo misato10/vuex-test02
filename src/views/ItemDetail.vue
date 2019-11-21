@@ -33,6 +33,34 @@ export default {
         return el.id == this.itemId
       }, this)
     }
+  },
+  metaInfo () {
+    return {
+      title: this.item[0].item_name + ' | SHOP DEMO',
+      meta: [
+        { charset: 'utf-8' },
+        {
+          'vmid': 'description',
+          'property': 'description',
+          'content': this.item[0].item_description
+        },
+        {
+          'vmid': 'og:title',
+          'property': 'og:title',
+          'content': this.title + ' | SHOP DEMO'
+        },
+        {
+          'vmid': 'og:description',
+          'property': 'og:description',
+          'content': this.item[0].item_description
+        },
+        {
+          'vmid': 'og:url',
+          'property': 'og:url',
+          'content': 'https://misato-vuex-shop.netlify.com/item/'+ this.item[0].id
+        },
+      ]
+    }
   }
 }
 

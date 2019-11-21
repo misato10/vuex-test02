@@ -2,6 +2,7 @@
   <v-container grid-list-lg>  
       <h1>Home page</h1>
       <!--<p>Counter is:{{ allItems }} </p>-->
+      <p>{{ allItems }}</p>
       <v-layout row wrap>
       <v-flex v-for="item in allItems" :key="item.id" d-flex xs6 md3 class="my-4">
         <v-card :to="'/item/' + item.id">
@@ -19,15 +20,27 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'home',
+  data: function () {
+   // return {
+    //  tittle: metas,
+      //description: 'このサイトは vue cli 、vue router 、vuexを使用したデモサイトです。',
+      //ogp: '/assets/images/ogp.png'
+    //}
+  },
   components: {
   },
   computed: {
-  // ゲッターを、スプレッド演算子（object spread operator）を使って computed に組み込む
-  ...mapGetters([
+    // ゲッターを、スプレッド演算子（object spread operator）を使って computed に組み込む
+    ...mapGetters([
       'allItems',
-      'metas'
-    ])
+      //'metas'
+    ]),
   },
+  metaInfo () {
+      return {
+        //title: allItems,
+      }
+    }
 }
 
 

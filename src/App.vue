@@ -20,8 +20,49 @@ export default {
     Header,
     Footer
   },
-  data: () => ({
-    //
-  }),
+  metaInfo: {
+      title: 'SHOP DEMO',
+      titleTemplate: null,
+      link: [
+        {
+          vmid: 'canonical',
+          rel: 'canonical',
+          href: 'https://misato-vuex-shop.netlify.com/'
+        }
+      ],
+      meta: [
+        { charset: 'utf-8' },
+        {
+          'vmid': 'description',
+          'property': 'description',
+          'content': '「ITエンジニア」や「ITやりたいけどよくわからない」、「ITなにそれ？」って方へ技術支援などを目的としたチームです。'
+        },
+        {
+          'vmid': 'og:title',
+          'property': 'og:title',
+          'content': 'SHOP DEMO'
+        },
+        {
+          'vmid': 'og:image',
+          'property': 'og:image',
+          'content': 'https://misato-vuex-shop.netlify.com/assets/images/ogp.png'
+        },
+        {
+          'vmid': 'og:description',
+          'property': 'og:description',
+          'content': '「ITエンジニア」や「ITやりたいけどよくわからない」、「ITなにそれ？」って方へ技術支援などを目的としたチームです。'
+        },
+        {
+          'vmid': 'og:type',
+          'property': 'og:type',
+          'content': 'website'
+        },
+        {
+          'vmid': 'og:url',
+          'property': 'og:url',
+          'content': 'https://misato-vuex-shop.netlify.com/'
+        },
+      ]
+    }
 };
 </script>
