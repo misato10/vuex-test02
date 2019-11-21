@@ -4,7 +4,7 @@
       <!--<p>Counter is:{{ allItems }} </p>-->
       <v-layout row wrap>
       <v-flex v-for="item in allItems" :key="item.id" d-flex xs6 md3 class="my-4">
-        <v-card :to="'/item/' + item.id">
+        <v-card :to="'/item/' + item.id + '/'">
             <img width="100%" :src="require('@/assets/'+ item.item_img)" alt="">
             <v-card-title>{{item.item_name}}</v-card-title>
             <v-card-subtitle><b>￥{{ item.item_price }}</b> +税</v-card-subtitle>
