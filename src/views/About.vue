@@ -19,7 +19,7 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.title + ' | ABIERRE',
+      title: this.title + ' | SHOP DEMO',
       meta: [
         { charset: 'utf-8' },
         {
@@ -30,7 +30,7 @@ export default {
         {
           'vmid': 'og:title',
           'property': 'og:title',
-          'content': this.title + ' | ABIERRE'
+          'content': this.title + ' | SHOP DEMO'
         },
         {
           'vmid': 'og:description',
