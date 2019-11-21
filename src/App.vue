@@ -45,7 +45,7 @@ export default {
         {
           'vmid': 'og:image',
           'property': 'og:image',
-          'content': 'https://misato-vuex-shop.netlify.com/assets/images/ogp.png'
+          'content': 'https://misato-vuex-shop.netlify.com/images/ogp.png'
         },
         {
           'vmid': 'og:description',
