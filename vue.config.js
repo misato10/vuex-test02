@@ -18,17 +18,17 @@ module.exports = {
   ],
   configureWebpack: () => {
     return {
-        plugins: [
-            new PrerenderSPAPlugin({
-              staticDir: path.join(__dirname, 'dist'),
-              routes: routerPaths
-            }),
-            new SitemapPlugin('https://misato-vuex-shop.netlify.com', routerPaths, {
-              fileName: 'sitemap.xml',
-              lastMod: true,
-              changeFreq: 'monthly'
-            })
-        ]
+      plugins: [
+        new PrerenderSPAPlugin({
+          staticDir: path.join(__dirname, 'dist'),
+          routes: routerPaths
+        }),
+        new SitemapPlugin('https://misato-vuex-shop.netlify.com', routerPaths, {
+          fileName: 'sitemap.xml',
+          lastMod: true,
+          changeFreq: 'monthly'
+        })
+      ]
     }
   }
 }
