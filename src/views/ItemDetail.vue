@@ -41,7 +41,7 @@ export default {
         { charset: 'utf-8' },
         {
           'vmid': 'description',
-          'property': 'description',
+          'name': 'description',
           'content': this.item[0].item_description
         },
         {

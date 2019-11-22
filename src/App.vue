@@ -23,18 +23,16 @@ export default {
   metaInfo: {
       title: 'SHOP DEMO',
       titleTemplate: null,
-      link: [
-        {
-          vmid: 'canonical',
-          rel: 'canonical',
-          href: 'https://misato-vuex-shop.netlify.com/'
-        }
-      ],
       meta: [
         { charset: 'utf-8' },
         {
+          'vmid': 'robots',
+          'name': 'robots',
+          'content': 'index, follow'
+        },
+        {
           'vmid': 'description',
-          'property': 'description',
+          'name': 'description',
           'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
         },
         {
