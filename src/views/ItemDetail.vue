@@ -36,7 +36,7 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.item[0].item_name + ' | SHOP DEMO',
+      title: this.item[0].item_name + ' | Vue Shop demo',
       meta: [
         { charset: 'utf-8' },
         {
@@ -47,7 +47,7 @@ export default {
         {
           'vmid': 'og:title',
           'property': 'og:title',
-          'content': this.item[0].item_name + ' | SHOP DEMO',
+          'content': this.item[0].item_name + ' | Vue Shop demo',
         },
         {
           'vmid': 'og:description',
@@ -62,7 +62,7 @@ export default {
         {
           'vmid': 'twitter:title',
           'name': 'twitter:title',
-          'content': this.item[0].item_name + ' | SHOP DEMO',
+          'content': this.item[0].item_name + ' | Vue Shop demo',
         },
         {
           'vmid': 'twitter:description',

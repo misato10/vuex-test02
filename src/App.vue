@@ -21,7 +21,7 @@ export default {
     Footer
   },
   metaInfo: {
-      title: 'SHOP DEMO',
+      title: 'Vue Shop demo',
       titleTemplate: null,
       meta: [
         { charset: 'utf-8' },
@@ -33,12 +33,12 @@ export default {
         {
           'vmid': 'description',
           'name': 'description',
-          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
+          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイト Vue Shop demo です。'
         },
         {
           'vmid': 'og:title',
           'property': 'og:title',
-          'content': 'SHOP DEMO'
+          'content': 'Vue Shop demo'
         },
         {
           'vmid': 'og:image',
@@ -48,7 +48,7 @@ export default {
         {
           'vmid': 'og:description',
           'property': 'og:description',
-          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
+          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイト Vue Shop demo です'
         },
         {
           'vmid': 'og:type',
@@ -73,7 +73,7 @@ export default {
         {
           'vmid': 'twitter:description',
           'name': 'twitter:description',
-          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイトです。'
+          'content': 'vue cli 、vuex 、vue router 、で制作した オンラインショップの DEMO のサイト Vue Shop demo です'
         },
         {
           'vmid': 'twitter:image:src',

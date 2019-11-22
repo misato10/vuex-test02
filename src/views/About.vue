@@ -19,7 +19,7 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.title + ' | SHOP DEMO',
+      title: this.title + ' | Vue Shop demo',
       meta: [
         { charset: 'utf-8' },
         {
@@ -30,7 +30,7 @@ export default {
         {
           'vmid': 'og:title',
           'property': 'og:title',
-          'content': this.title + ' | SHOP DEMO'
+          'content': this.title + ' | Vue Shop demo'
         },
         {
           'vmid': 'og:description',
@@ -45,7 +45,7 @@ export default {
         {
           'vmid': 'twitter:title',
           'name': 'twitter:title',
-          'content': this.title + ' | SHOP DEMO'
+          'content': this.title + ' | Vue Shop demo'
         },
         {
           'vmid': 'twitter:description',

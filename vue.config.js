@@ -7,7 +7,7 @@ const SitemapPlugin = require('sitemap-webpack-plugin').default
 
 //const items = itemas
 
-const dynamicPaths  = ['/item/1/','/item/2/','/item/3/','/item/4/']
+const dynamicPaths  = ['/item/1/','/item/2/','/item/3/','/item/4/','/item/5/','/item/6/','/item/7/','/item/9/','/item/9/','/item/10/']
 const staticPaths = ['/', '/about/', ]
 const routerPaths = staticPaths.concat(dynamicPaths);
 
