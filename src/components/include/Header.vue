@@ -5,10 +5,9 @@
     <v-toolbar-items>
       <v-btn text class="white--text" to="/" exact>Home</v-btn>
       <v-btn text class="white--text" to="/about/">About</v-btn>
+      <v-btn text class="white--text" to="/cart/">Cart</v-btn>
   </v-toolbar-items>
-    
   </v-app-bar>
-
 </template>
 
 <script>

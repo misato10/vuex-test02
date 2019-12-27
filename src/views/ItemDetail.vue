@@ -5,34 +5,76 @@
         <v-img :src="require('@/assets/'+ item[0].item_img)" ></v-img>
       </v-col>
       <v-col>
+        <p>{{ getCartList }}</p>
         <h1 class="display-1">{{ item[0].item_name }}</h1>
         <p class="title"><b class="font-weight-black">¥{{ item[0].item_price }}</b>+税</p>
         <p class="text-justify"> {{ item[0].item_description }}</p>
-      </v-col>
+        <v-btn color="primary" dark @click.stop="dialog = true">カートに入れる</v-btn>
+        <v-dialog v-model="dialog" max-width="620">
+          <v-card>
+            <v-card-title class="headline">以下の商品をカートに追加しました。</v-card-title>
+            <div class="d-flex flex-row mb-6">
+              <v-col style="width: 50%;">
+                <v-img :src="require('@/assets/'+ item[0].item_img)" ></v-img>
+              </v-col>
+              <v-col style="width: 50%;">
+                <p class="font-weight-black title">{{ item[0].item_name }}</p>
+                <p><b class="font-weight-black">¥{{ item[0].item_price }}</b>+税</p>
+              </v-col>
+            </div>
 
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn
+                color="primary darken-1"
+                text
+                @click="dialog = false; addCartList(item[0])"
+              >買い物を続ける</v-btn>
+
+              <v-btn 
+                color="primary darken-1"
+                text
+                @click="dialog = false; addCartList(item[0])">レジに進む</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </v-col>
       </v-row>
   </v-container>
 </template>
 
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions , mapGetters } from 'vuex';
 
 export default {
   name: 'itemDetail',
   props: {
     itemId: Number,
   },
+  data () {
+      return {
+        dialog: false,
+      }
+    },
   computed: {
     // ゲッターを、スプレッド演算子（object spread operator）を使って computed に組み込む
     ...mapGetters([
-        'allItems'
+        'allItems',
+        'getCartList',
+        'doubleCounter'
     ]),
     item: function() {
       return this.allItems.filter(function(el) {
-        return el.id == this.itemId
+        return el.id[0] == this.itemId
       }, this)
     }
+  },
+  methods: {
+    ...mapActions([
+      'addCartList',
+      'increment',
+    ])
   },
   metaInfo () {
     return {
