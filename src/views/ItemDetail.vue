@@ -5,7 +5,6 @@
         <v-img :src="require('@/assets/'+ item[0].item_img)" ></v-img>
       </v-col>
       <v-col>
-        <p>{{ getCartList }}</p>
         <h1 class="display-1">{{ item[0].item_name }}</h1>
         <p class="title"><b class="font-weight-black">¥{{ item[0].item_price }}</b>+税</p>
         <p class="text-justify"> {{ item[0].item_description }}</p>
@@ -34,7 +33,7 @@
               <v-btn 
                 color="primary darken-1"
                 text
-                @click="dialog = false; addCartList(item[0])">レジに進む</v-btn>
+                @click="dialog = false; addCartList(item[0]); goCart()">レジに進む</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -74,7 +73,10 @@ export default {
     ...mapActions([
       'addCartList',
       'increment',
-    ])
+    ]),
+    goCart() {
+      this.$router.push({ path: '/cart/' });
+    }
   },
   metaInfo () {
     return {

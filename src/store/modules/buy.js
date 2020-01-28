@@ -1,13 +1,10 @@
 const state = {
-  counter: 0,
-  cartList: []
+  cartList: [],
+
 
 };
 
 const getters = {
-  doubleCounter: state => {
-    return state.counter * 2;
-  },
   getCartList: (state)  => {
     return state.cartList;
   }
@@ -15,20 +12,44 @@ const getters = {
 
 const mutations = {
   addCartList: (state, payload) => {
-    state.cartList.push(payload);
+    let data =  payload;
+    console.log(data.id);
+    console.log(state.cartList);
 
+    function isNum(json) { 
+      return json.id === data.id;
+    }
+
+    let activeData = state.cartList.find(isNum);
+    let indexData = state.cartList.findIndex(isNum);
+    if(!activeData) {
+      console.log("ないよ");
+      data["num"] = 1;
+      state.cartList.push(data);
+
+    } else {
+      if(activeData["id"] == data.id ) {
+        console.log("aruyo");
+        state.cartList[indexData]["num"]++;
+  
+       } else {
+        console.log("ないよ");
+        data["num"] = 1;
+        state.cartList.push(data);
+       }
+    }
   },
-  increment: (state, payload) => {
-    state.counter +=payload;
-  },
+  removeCartItem: (state, index) => {
+    state.cartList.splice(index,1);
+  }
 };
 
 const actions = {
   addCartList: ({ commit }, payload)  => {
     commit('addCartList', payload);
   },
-  increment: ({ commit }, payload) => {
-    commit('increment', payload);
+  removeCartItem: ({ commit }, index)  => {
+    commit('removeCartItem', index);
   }
 };
 
