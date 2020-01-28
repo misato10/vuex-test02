@@ -24,7 +24,6 @@ const mutations = {
 
     } else {
       if(activeData["id"] == data.id ) {
-        console.log("aruyo");
         state.cartList[indexData]["num"]++;
   
        } else {
