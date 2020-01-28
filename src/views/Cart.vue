@@ -2,8 +2,8 @@
   <v-container>
     <h1>Cart</h1>
       
-      <v-layout row wrap v-if="cart">
-      <v-simple-table>
+      <v-layout row wrap>
+      <v-simple-table v-if="cart">
         <template v-slot:default>
           <thead>
             <tr>
@@ -30,8 +30,8 @@
             </tr>
           </tbody>
         </template>
-        <p v-if="cart">お客様のショッピングカートに商品はありません。</p>
       </v-simple-table>
+      <p v-if="!cart">お客様のショッピングカートに商品はありません。</p>
       </v-layout>
   </v-container>
 </template>
