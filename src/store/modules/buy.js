@@ -1,7 +1,5 @@
 const state = {
-  cartList: [],
-
-
+  cartList: []
 };
 
 const getters = {
@@ -13,8 +11,6 @@ const getters = {
 const mutations = {
   addCartList: (state, payload) => {
     let data =  payload;
-    console.log(data.id);
-    console.log(state.cartList);
 
     function isNum(json) { 
       return json.id === data.id;
@@ -23,7 +19,6 @@ const mutations = {
     let activeData = state.cartList.find(isNum);
     let indexData = state.cartList.findIndex(isNum);
     if(!activeData) {
-      console.log("ないよ");
       data["num"] = 1;
       state.cartList.push(data);
 
@@ -33,7 +28,6 @@ const mutations = {
         state.cartList[indexData]["num"]++;
   
        } else {
-        console.log("ないよ");
         data["num"] = 1;
         state.cartList.push(data);
        }
