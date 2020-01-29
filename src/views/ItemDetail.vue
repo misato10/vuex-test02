@@ -6,7 +6,7 @@
       </v-col>
       <v-col>
         <h1 class="display-1">{{ item[0].item_name }}</h1>
-        <p class="title"><b class="font-weight-black">¥{{ item[0].item_price }}</b>+税</p>
+        <p class="title"><b class="font-weight-black">¥{{ item[0].item_price | localeNum }}</b>+税</p>
         <p class="text-justify"> {{ item[0].item_description }}</p>
         <v-btn color="primary" dark @click.stop="dialog = true">カートに入れる</v-btn>
         <v-dialog v-model="dialog" max-width="620">
@@ -18,7 +18,7 @@
               </v-col>
               <v-col style="width: 50%;">
                 <p class="font-weight-black title">{{ item[0].item_name }}</p>
-                <p><b class="font-weight-black">¥{{ item[0].item_price }}</b>+税</p>
+                <p><b class="font-weight-black">¥{{ item[0].item_price | localeNum }}</b>+税</p>
               </v-col>
             </div>
 
@@ -46,6 +46,7 @@
 <script>
 import { mapActions , mapGetters } from 'vuex';
 
+
 export default {
   name: 'itemDetail',
   props: {
@@ -65,8 +66,14 @@ export default {
     ]),
     item: function() {
       return this.allItems.filter(function(el) {
-        return el.id[0] == this.itemId
+        return el["id"] == this.itemId
       }, this)
+    }
+  },
+  filters: {
+    localeNum: function (value) {
+      value = Number(value);
+      return value.toLocaleString();
     }
   },
   methods: {
